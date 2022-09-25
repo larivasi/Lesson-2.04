@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var rectangleView: UIView!
     
     @IBOutlet weak var redValueLabel: UILabel!
