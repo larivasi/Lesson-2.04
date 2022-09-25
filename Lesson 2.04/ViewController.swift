@@ -49,7 +49,11 @@ class ViewController: UIViewController {
         let greenValue = CGFloat(greenSlider.value)
         let blueValue = CGFloat(blueSlider.value)
         
-        rectangleView.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1)
+        rectangleView.backgroundColor = UIColor(
+            red: redValue,
+            green: greenValue,
+            blue: blueValue,
+            alpha: 1)
     }
 }
 
