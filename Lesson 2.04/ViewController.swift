@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var rectangleView: UIView!
     
     @IBOutlet weak var redValueLabel: UILabel!
+    @IBOutlet weak var greenValueLabel: UILabel!
+    @IBOutlet weak var blueValueLabel: UILabel!
     
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
@@ -19,20 +21,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         redValueLabel.text = String(redSlider.value)
+        greenValueLabel.text = String(greenSlider.value)
+        blueValueLabel.text = String(blueSlider.value)
+        
         rectangleView.layer.cornerRadius = 20
     }
     
-    @IBAction func sliderColorChange(_ sender: UISlider) {
+    @IBAction func sliderRedColor(_ sender: UISlider) {
         redValueLabel.text = String(format: "%0.2f", redSlider.value)
         changeColor()
     }
     
-    @IBAction func sliderGreenColor(_ sender: Any) {
+    @IBAction func sliderGreenColor(_ sender: UISlider) {
+        greenValueLabel.text = String(format: "%0.2f", greenSlider.value)
         changeColor()
     }
     
-    @IBAction func sliderBlueColor(_ sender: Any) {
+    @IBAction func sliderBlueColor(_ sender: UISlider) {
+        blueValueLabel.text = String(format: "%0.2f", blueSlider.value)
         changeColor()
     }
     
